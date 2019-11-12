@@ -1,0 +1,52 @@
+{
+    "food": [
+        {
+            "ID": "1",
+            "name": "Apple",
+            "type": "fruit",
+            "details": "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
+        },
+        {
+            "ID": "2",
+            "name": "Chicken",
+            "type": "meat",
+            "details": "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        },
+        {
+            "ID": "3",
+            "name": "Banana",
+            "type": "fruit",
+            "details": "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        },
+        {
+            "ID": "4",
+            "name": "Broccolli",
+            "type": "gemuse",
+            "details": "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        },
+        {
+            "ID": "5",
+            "name": "Zucchni",
+            "type": "gemuse",
+            "details": "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        },
+        {
+            "ID": "6",
+            "name": "Orange",
+            "type": "fruit",
+            "details": "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        },
+        {
+            "ID": "7",
+            "name": "Aubergine",
+            "type": "gemuse",
+            "details": "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        },
+        {
+            "ID": "8",
+            "name": "Beef",
+            "type": "meat",
+            "details": "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        }
+    ]
+}
