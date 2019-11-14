@@ -110,7 +110,7 @@ function Food() {
     return (
         <FoodStyles>
             <Filter1Styles>
-                <CheckBoxStyles background="red">
+                <CheckBoxStyles background="green">
                     <input
                         type="checkbox"
                         name="vegetable"
@@ -118,15 +118,11 @@ function Food() {
                     />
                     <label htmlFor="veg">Vegetable</label>
                 </CheckBoxStyles>
-                <CheckBoxStyles
-                    style={{ background: 'green', borderRadius: '25%' }}
-                >
+                <CheckBoxStyles background="red">
                     <input type="checkbox" name="meat" onChange={handleMeat} />
                     <label htmlFor="meat">Meat</label>
                 </CheckBoxStyles>
-                <CheckBoxStyles
-                    style={{ background: 'orange', borderRadius: '25%' }}
-                >
+                <CheckBoxStyles background="orange">
                     <input
                         type="checkbox"
                         name="fruit"
@@ -264,9 +260,16 @@ const Filter1Styles = styled.div`
     display: flex;
 `;
 
-const CheckBoxStyles = styled.h5({ borderRadius: '25%' }, props => ({
-    background: props.background,
-}));
+const CheckBoxStyles = styled.h5(
+    {
+        borderRadius: '10px',
+        padding: '5px',
+        minWidth: '65px',
+    },
+    props => ({
+        background: props.background,
+    })
+);
 
 const SpanStyles = styled.span({ fontSize: 12 }, props => ({
     background: props.background,
