@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styled from '@emotion/styled';
 import data from '../../data.json';
+import { FoodStyles } from '../styles/FoodStyles';
 function Food() {
     const [data, setData] = useState({ food: [] });
     const [url, setUrl] = useState('../../data.json');
@@ -73,7 +74,8 @@ function Food() {
                     </picture>
                     <div className="card-content">
                         <h3>
-                            {item.name} <span>{item.type}</span>{' '}
+                            {item.name}
+                            <span>{item.type}</span>
                         </h3>
                         <p>{item.details}</p>
                         <p>> more</p>
@@ -90,12 +92,13 @@ function Food() {
                     <picture className="thumbnail">
                         <img
                             src="http://www.abbeyjfitzgerald.com/wp-content/uploads/2017/02/image-example-01.jpg"
-                            alt="A banana that looks like a bird"
+                            alt="i love food"
                         />
                     </picture>
                     <div className="card-content">
                         <h3>
-                            {item.name} <span>{item.type}</span>{' '}
+                            {item.name}
+                            <span>{item.type}</span>
                         </h3>
                         <p>{item.details}</p>
                         <p>> more</p>
@@ -106,40 +109,53 @@ function Food() {
 
     return (
         <FoodStyles>
-            <div>
-                <input type="checkbox" name="vegetable" onChange={handleVeg} />
-                <input type="checkbox" name="meat" onChange={handleMeat} />
-                <input type="checkbox" name="fruit" onChange={handleFruit} />
-            </div>
+            <Filter1Styles>
+                <CheckBoxStyles background="red">
+                    <input
+                        type="checkbox"
+                        name="vegetable"
+                        onChange={handleVeg}
+                    />
+                    <label htmlFor="veg">Vegetable</label>
+                </CheckBoxStyles>
+                <CheckBoxStyles
+                    style={{ background: 'green', borderRadius: '25%' }}
+                >
+                    <input type="checkbox" name="meat" onChange={handleMeat} />
+                    <label htmlFor="meat">Meat</label>
+                </CheckBoxStyles>
+                <CheckBoxStyles
+                    style={{ background: 'orange', borderRadius: '25%' }}
+                >
+                    <input
+                        type="checkbox"
+                        name="fruit"
+                        onChange={handleFruit}
+                    />
+                    <label htmlFor="fruit">Fruit</label>
+                </CheckBoxStyles>
+            </Filter1Styles>
 
             <FilterStyles>
                 <div className="contain">
                     <ul className="responsive-table">
                         <li className="table-row">
-                            <div className="cols cols-2" data-label="item Id">
-                                filter
-                            </div>
-                            <div className="cols cols-2" data-label="item Name">
+                            <div className="cols cols-2">Filter</div>
+                            <div className="cols cols-2" data-label="Vegetable">
                                 <input
                                     type="checkbox"
                                     name="vegetable"
                                     onChange={handleVeg}
                                 />
                             </div>
-                            <div
-                                className="cols cols-2"
-                                data-label="Assigned to"
-                            >
+                            <div className="cols cols-2" data-label="Meat">
                                 <input
                                     type="checkbox"
                                     name="meat"
                                     onChange={handleMeat}
                                 />
                             </div>
-                            <div
-                                className="cols cols-2"
-                                data-label="Order Status"
-                            >
+                            <div className="cols cols-2" data-label="Fruit">
                                 <input
                                     type="checkbox"
                                     name="fruit"
@@ -150,6 +166,7 @@ function Food() {
                     </ul>
                 </div>
             </FilterStyles>
+
             <main class="main-area">
                 <div class="centered">
                     <section class="cards">
@@ -166,72 +183,6 @@ function Food() {
     );
 }
 export default Food;
-
-const FoodStyles = styled.div`
-    .main-area {
-        margin: auto;
-        max-width: 900px;
-    }
-    img {
-        display: block;
-        border: 0;
-        width: 100%;
-        height: auto;
-    }
-
-    .card {
-        background: white;
-        margin-bottom: 2em;
-    }
-
-    .card a {
-        color: black;
-        text-decoration: none;
-    }
-
-    .card a:hover {
-        box-shadow: 3px 3px 8px hsl(0, 0%, 80%);
-    }
-
-    .card-content {
-        padding: 1.4em;
-    }
-
-    .card-content h3 {
-        margin-top: 0;
-        margin-bottom: 0.5em;
-        font-weight: bold;
-    }
-
-    .card-content p {
-        font-size: 80%;
-    }
-
-    .card-content span {
-        float: right;
-        background: orange;
-        border-radius: 30%;
-        padding: 3px;
-    }
-
-    @media screen and (min-width: 40em) {
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .card {
-            flex: 0 1 calc(50% - 1em);
-        }
-    }
-
-    @media screen and (min-width: 60em) {
-        .card {
-            flex: 0 1 calc(25% - 1em);
-        }
-    }
-`;
 
 const FilterStyles = styled.div`
     .contain {
@@ -305,3 +256,18 @@ const FilterStyles = styled.div`
         }
     }
 `;
+
+const Filter1Styles = styled.div`
+    max-width: 250px;
+    justify-content: space-around;
+    margin-left: 75px;
+    display: flex;
+`;
+
+const CheckBoxStyles = styled.h5({ borderRadius: '25%' }, props => ({
+    background: props.background,
+}));
+
+const SpanStyles = styled.span({ fontSize: 12 }, props => ({
+    background: props.background,
+}));
