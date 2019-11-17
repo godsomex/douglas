@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-function Nav() {
+function NavBar() {
     return (
         <NavBarStyles>
             <nav>
@@ -35,7 +35,7 @@ function Nav() {
     );
 }
 
-export default Nav;
+export default NavBar;
 
 const NavBarStyles = styled.div`
     .menu-btn {

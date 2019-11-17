@@ -163,9 +163,9 @@ function Food() {
                 </div>
             </FilterStyles>
 
-            <main class="main-area">
-                <div class="centered">
-                    <section class="cards">
+            <main className="main-area">
+                <div className="centered">
+                    <section className="cards">
                         {isError && <div>Something went wrong ...</div>}
                         {isLoading && <div>Loading ...</div>}
 

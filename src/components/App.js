@@ -5,7 +5,8 @@ import Food from './Food';
 function App() {
     return (
         <>
-            <Nav></Nav>
+            <Nav />
+
             <Food />
         </>
     );
