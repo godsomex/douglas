@@ -23,7 +23,12 @@ module.exports = {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
             },
+            { test: /\.tsx?$/, loader: 'ts-loader' },
         ],
+    },
+    resolve: {
+        // Add '.ts' and '.tsx' as resolvable extensions.
+        extensions: ['.ts', '.tsx', '.js', '.json'],
     },
     output: {
         path: __dirname + '/dist',
