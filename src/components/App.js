@@ -1,14 +1,10 @@
 import React from 'react';
-// import Nav from './Nav';
-// import Food from './Food';
-import Home from './Home';
+import Home from './pages/Home';
 
 function App() {
     return (
         <>
             <Home />
-            {/* <Nav />
-            <Food /> */}
         </>
     );
 }
