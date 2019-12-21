@@ -1,17 +1,15 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
-
-const Men = () => {
-    return <div>Men</div>;
-};
+import Collection from './collections/Collection';
+import Shop from './pages/Shop';
 
 function App() {
     return (
         <div>
             <Switch>
                 <Route exact path="/" component={Home} />
-                <Route path="/men" component={Men} />
+                <Route path="/shop" component={Shop} />
             </Switch>
         </div>
     );
