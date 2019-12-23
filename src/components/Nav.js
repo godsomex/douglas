@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
 function Nav() {
     return (
@@ -11,7 +12,7 @@ function Nav() {
                         <span className="nav-icon"></span>
                     </label>
                     <li className="logo">
-                        <a href="#">TechFun</a>
+                        <Link to="/">TechFun</Link>
                     </li>
                     <li className="item">
                         <a href="#">Home</a>
