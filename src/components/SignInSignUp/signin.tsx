@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import styled from '@emotion/styled';
+import FormInput from '../form-input/FormInput';
+import CustomButton from '../custom-button/CustomButton';
 
-function signin() {
+function Signin() {
     const [values, setValues] = useState({ email: '', password: '' });
 
     const handleSubmit = e => {
@@ -15,25 +18,37 @@ function signin() {
         setValues(values => ({ ...values, [name]: value }));
     };
     return (
-        <div>
+        <SigninStyle>
             <form onSubmit={handleSubmit}>
-                <input
+                <FormInput
                     name="email"
                     type="email"
                     value={values.email}
                     onChange={handleChange}
+                    label="email"
                 />
-                <input
+                <FormInput
                     name="password"
                     type="password"
                     value={values.password}
                     onChange={handleChange}
+                    label="password"
                 />
 
-                <input type="submit" value="submit" />
+                <CustomButton type="submit"> Login </CustomButton>
             </form>
-        </div>
+        </SigninStyle>
     );
 }
 
-export default signin;
+export default Signin;
+
+const SigninStyle = styled.div`
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        margin: 10px 0;
+    }
+`;

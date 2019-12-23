@@ -1,8 +1,8 @@
 import React from 'react';
 
-import SignInPage from '../SignInSignUp/signin';
+import SignIn from '../SignInSignUp/SignIn';
 
-function SignIn() {
+function SignInPage() {
     return (
         <div>
             <SignIn />
